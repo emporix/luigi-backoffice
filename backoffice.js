@@ -1,17 +1,12 @@
-window.Builder = {};
 // Listening to Luigi init
 LuigiClient.addInitListener(init => { 
     var initData = init;
     var baasObject = initData;
+    var transferObject = new Object();
     for (var attribute in baasObject) {
         if (baasObject.hasOwnProperty(attribute)) {
-            window.Builder[attribute] = baasObject[attribute];
+            transferObject[attribute] = baasObject[attribute];
         }
     }
-    // resumeBootstrap for interface
-    $(document).ready(function () {
-        if ((typeof angular !== "undefined") && (typeof angular.resumeBootstrap !== "undefined")) {
-            angular.resumeBootstrap();
-        }
-    });
+    window.postMessage(["init", JSON.stringify(transferObject)], "*")
 });

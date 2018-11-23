@@ -29,11 +29,6 @@ window.Builder = {};
 window.CockpitNG = window.Builder;
 
 Builder.initialized = false;
-// Pragiti: Temporary hardcoded later will come from parent luigi backoffice
-Builder.currentLanguage = "en-us";
-var notificationConfigValue = {autoProcessing: true, autoNotifications: true};
-Builder.notificationConfig = notificationConfigValue;
-Builder.currentAccountId = null;
 
 Builder.missingDependencies = [];
 
@@ -767,10 +762,5 @@ $(document).ready(function () {
                 // restangular still missing, which is fine.
             }
         }
-    }
-});
-$(document).ready(function () {
-    if ((typeof angular !== "undefined") && (typeof angular.resumeBootstrap !== "undefined")) {
-        angular.resumeBootstrap();
     }
 });
