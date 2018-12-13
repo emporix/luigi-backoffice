@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    console.error('This version of Builder Editors (V2) component is deprecated, and soon will be deleted. Please upgrade it to the latest version. Visit https://devportal.yaas.io/tools/buildersdk/index.html#ImplementationGuidefortheBuilderEditorModuleversion3 for more information.')
+    console.info('This version of Builder Editors (V2) component is deprecated, and soon will be deleted. Please upgrade it to the latest version. Visit https://devportal.yaas.io/tools/buildersdk/index.html#ImplementationGuidefortheBuilderEditorModuleversion3 for more information.')
 
     var module = angular.module('builder_editors', []);
 
