@@ -9,8 +9,8 @@
  * License: MIT
  */
 /* Style when highlighting a search. */
-@import url(https://fonts.googleapis.com/css?family=Dosis:400,500,600);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
 .ui-select-highlight {
   font-weight: bold;
 }
@@ -337,6 +337,8 @@ html {
 }
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-display: swap;
 }
 article,
 aside,
@@ -1393,7 +1395,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #313440;
