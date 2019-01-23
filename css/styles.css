@@ -8522,6 +8522,11 @@ fieldset[disabled] .btn-default.active,
 }
 .btn-warning {
   box-shadow: 0 3px 0 #fcda08;
+  background: #ff9f0f;
+  color: #fff;
+  text-shadow: 1px 1px 2px #b77005;
+  -webkit-text-shadow: 1px 1px 2px #b77005;
+  -moz-text-shadow: 1px 1px 2px #b77005;
 }
 .btn-danger {
   box-shadow: none;
