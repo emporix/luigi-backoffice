@@ -8528,6 +8528,16 @@ fieldset[disabled] .btn-default.active,
   -webkit-text-shadow: 1px 1px 2px #b77005;
   -moz-text-shadow: 1px 1px 2px #b77005;
 }
+.btn-warning:hover,.btn-warning:focus {
+  color: #fff;
+  background-color: #f5980d;
+  border-color: #f3960a;
+}
+.btn-warning:active, .btn-warning.active, .open > .dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #d6840a;
+  border-color: #d6840a;
+}
 .btn-danger {
   box-shadow: none;
 }
