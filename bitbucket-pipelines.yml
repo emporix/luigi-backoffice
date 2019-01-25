@@ -1,0 +1,68 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: danggrianto/docker-node-compass:latest
+
+pipelines:
+  tags:
+    dev-*:
+      - step:
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - npm install -g cf-cli
+            - npm install -g lerna
+            - apt-get update
+            - wget -O /tmp/cf-cli.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.34.1" #current version of cli is 6.31.0
+            - ls -alF /tmp/
+            - mkdir -p /usr/local/bin
+            - tar -xzf /tmp/cf-cli.tgz -C /usr/local/bin
+            - cf -v
+            - cf login -a https://api.lyra-836.appcloud.swisscom.com -u $SWISSCOM_USERNAME -p $SWISSCOM_PASSWORD -s dev
+            - cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
+            - cf install-plugin blue-green-deploy -r CF-Community -f
+            - pwd
+            - cd core
+            - ls -alF
+            - lerna bootstrap
+            - lerna run bundle
+            - cd examples/luigi-sample-angular/
+            - npm install
+            - ls -alF
+            - ng build --prod
+            - mv manifest-dev.yml manifest.yml
+            - cf bgd backoffice-dev
+          artifacts:
+            - core/examples/luigi-sample-angular/dist/**
+
+    prod-*:
+      - step:
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - npm install -g cf-cli
+            - npm install -g lerna
+            - apt-get update
+            - wget -O /tmp/cf-cli.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.34.1" #current version of cli is 6.31.0
+            - ls -alF /tmp/
+            - mkdir -p /usr/local/bin
+            - tar -xzf /tmp/cf-cli.tgz -C /usr/local/bin
+            - cf -v
+            - cf login -a https://api.lyra-836.appcloud.swisscom.com -u $SWISSCOM_USERNAME -p $SWISSCOM_PASSWORD -s prod
+            - cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
+            - cf install-plugin blue-green-deploy -r CF-Community -f
+            - pwd
+            - cd core
+            - ls -alF
+            - lerna bootstrap
+            - lerna run bundle
+            - cd examples/luigi-sample-angular/
+            - npm install
+            - ls -alF
+            - ng build --prod
+            - mv manifest-prod.yml manifest.yml
+            - cf bgd backoffice-saas
+          artifacts:
+            - core/examples/luigi-sample-angular/dist/**
