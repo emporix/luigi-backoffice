@@ -8520,7 +8520,7 @@ fieldset[disabled] .btn-default.active,
 .btn-info {
   box-shadow: 0 3px 0 #1c7594;
 }
-/* .btn-warning {
+.btn-warning {
   box-shadow: 0 3px 0 #fcda08;
   background: #ff9f0f;
   color: #fff;
@@ -8538,7 +8538,7 @@ fieldset[disabled] .btn-default.active,
   color: #fff;
   background-color: #d6840a;
   border-color: #d6840a;
-} */
+}
 .btn-danger {
   box-shadow: none;
 }
