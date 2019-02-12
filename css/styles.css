@@ -3574,7 +3574,7 @@ fieldset[disabled] .btn-info.focus {
 }
 .btn-warning {
   color: #000;
-  background-color: #FCDF2B;
+  background-color: #ff9f0f;
   border-color: #fcdb12;
 }
 .btn-warning:focus,
@@ -3622,11 +3622,11 @@ fieldset[disabled] .btn-warning:focus,
 .btn-warning.disabled.focus,
 .btn-warning[disabled].focus,
 fieldset[disabled] .btn-warning.focus {
-  background-color: #FCDF2B;
+  background-color: #ff9f0f;
   border-color: #fcdb12;
 }
 .btn-warning .badge {
-  color: #FCDF2B;
+  color: #ff9f0f;
   background-color: #000;
 }
 .btn-danger {
@@ -5433,7 +5433,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-warning {
-  background-color: #FCDF2B;
+  background-color: #ff9f0f;
 }
 .progress-striped .progress-bar-warning {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -8374,23 +8374,23 @@ section {
   color: inherit!important;
 }
 .btn-primary {
-  color: #27394f;
-  background-color: #FCDF2B;
-  border-color: #e2c713;
+  color: #fff;
+  background-color: #ff9f0f;
+  border-color: #ff9f0f;
   box-shadow: 0 2px 0 #e6ca1f;
 }
 .btn-primary:focus,
 .btn-primary:active:focus {
   background-color: #e6ca1f;
-  outline-color: #e2c713;
+  outline-color: #ff9f0f;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-  color: #27394f;
+  color: #fff;
   background-color: #ffe533;
-  border-color: #e2c713;
+  border-color: #ff9f0f;
   box-shadow: 0 2px 0 #cfb611;
 }
 .btn-primary:active,
@@ -8420,7 +8420,7 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
   background-color: #edf1f5;
-  border-color: #e2c713;
+  border-color: #ff9f0f;
 }
 .btn-primary.disabled:active,
 .btn-primary[disabled]:active,
@@ -8437,7 +8437,7 @@ fieldset[disabled] .btn-primary.active,
   box-shadow: 0 2px 0 #cfb611;
 }
 .btn-primary .badge {
-  color: #FCDF2B;
+  color: #ff9f0f;
   background-color: #27394f;
 }
 .btn-default {
@@ -13823,7 +13823,7 @@ li.yg-dropdown--menu-link > a:hover * {
   padding: 0 3px;
   line-height: 12px;
   border: 2px solid #0486e0;
-  background: #FCDF2B;
+  background: #ff9f0f;
   color: #000;
   user-select: none;
   -webkit-user-select: none;
