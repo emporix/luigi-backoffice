@@ -8381,15 +8381,15 @@ section {
 }
 .btn-primary:focus,
 .btn-primary:active:focus {
-  background-color: #e6ca1f;
-  outline-color: #ff9f0f;
+  background-color: #d6840a;
+  outline-color: #d6840a;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #ffe533;
+  background-color: #ff9f0f;
   border-color: #ff9f0f;
   box-shadow: 0 2px 0 #cfb611;
 }
@@ -8397,8 +8397,8 @@ section {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   background-image: none;
-  background-color: #ffe847;
-  border-color: #ecd11d;
+  background-color: #d6840a;
+  border-color: #d6840a;
 }
 .btn-primary.disabled,
 .btn-primary[disabled],
