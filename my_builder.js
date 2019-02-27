@@ -268,13 +268,15 @@ Builder.notificationManager = {
         Builder.postNotificationMgr("showInfo", {message: msg, data: data});
     },
     showConfirmation : function (title, message, onConfirmCallback, onCancelCallback, data) {
-        var settings = {
-            header: title,
-            body: message
-        }
-        LuigiClient.uxManager()
-        .showConfirmationModal(settings)
-        .then(onConfirmCallback,onCancelCallback);
+        this.showModalDialog({
+            message: message,
+            title: title,
+            onOk: onConfirmCallback,
+            onCancel : onCancelCallback,
+            fullBlocking : false,
+            closeable: false,
+            data: data
+        });
     },
     showModalDialog : function (modalConfiguration) {
         this.onOkCallback = modalConfiguration.onOk;
