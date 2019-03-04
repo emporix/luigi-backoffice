@@ -269,7 +269,7 @@ Builder.notificationManager = {
     },
     showConfirmation : function (title, message, onConfirmCallback, onCancelCallback, data) {
         var appdomain = window.location.hostname.split('.')[0];
-        if(appdomain=="localhost" || appdomain=="backoffice-dev" || appdomain.indexOf("dev")){
+        if(appdomain=="localhost" || appdomain=="backoffice-dev" || appdomain.indexOf("dev")>0){
             console.log('showConfirmation for dev');
             // for local and dev environment
             var settings = {
