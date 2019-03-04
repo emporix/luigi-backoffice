@@ -268,15 +268,29 @@ Builder.notificationManager = {
         Builder.postNotificationMgr("showInfo", {message: msg, data: data});
     },
     showConfirmation : function (title, message, onConfirmCallback, onCancelCallback, data) {
-        this.showModalDialog({
-            message: message,
-            title: title,
-            onOk: onConfirmCallback,
-            onCancel : onCancelCallback,
-            fullBlocking : false,
-            closeable: false,
-            data: data
-        });
+        var appdomain = window.location.hostname.split('.')[0];
+        if(appdomain=="localhost" || appdomain=="backoffice-dev"){
+            console.log('showConfirmation for dev');
+            // for local and dev environment
+            var settings = {
+                header: title,
+                body: message
+            }
+            LuigiClient.uxManager()
+            .showConfirmationModal(settings)
+            .then(onConfirmCallback,onCancelCallback);
+        }else{
+            this.showModalDialog({
+                message: message,
+                title: title,
+                onOk: onConfirmCallback,
+                onCancel : onCancelCallback,
+                fullBlocking : false,
+                closeable: false,
+                data: data
+            });
+        }
+        
     },
     showModalDialog : function (modalConfiguration) {
         this.onOkCallback = modalConfiguration.onOk;
