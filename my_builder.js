@@ -675,9 +675,10 @@ if (typeof angular !== "undefined") {
                                 var notificationEntry = whiteList[index];
                                 if (whiteList[index].httpMethod == operation && response.status == notificationEntry.status) {
                                     if(objName!=""){
+                                        var newMessage = notificationEntry.message.replace('Data ', '');
                                         Builder.notificationManager.addNotification({
                                             level: notificationEntry.level,
-                                            message: objName + '' +notificationEntry.message.toLowerCase(),
+                                            message: objName + '' +newMessage,
                                             status: notificationEntry.status,
                                             httpMethod: notificationEntry.httpMethod
                                         });
