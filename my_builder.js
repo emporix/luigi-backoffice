@@ -672,12 +672,22 @@ if (typeof angular !== "undefined") {
                             for (var index = 0; index < whiteList.length; index++) {
                                 var notificationEntry = whiteList[index];
                                 if (whiteList[index].httpMethod == operation && response.status == notificationEntry.status) {
-                                    Builder.notificationManager.addNotification({
-                                        level: notificationEntry.level,
-                                        message: objName + '' +notificationEntry.message,
-                                        status: notificationEntry.status,
-                                        httpMethod: notificationEntry.httpMethod
-                                    });
+                                    if(objName!=""){
+                                        Builder.notificationManager.addNotification({
+                                            level: notificationEntry.level,
+                                            message: objName + '' +notificationEntry.message.toLowerCase(),
+                                            status: notificationEntry.status,
+                                            httpMethod: notificationEntry.httpMethod
+                                        });
+                                    }else{
+                                        Builder.notificationManager.addNotification({
+                                            level: notificationEntry.level,
+                                            message: objName + '' +notificationEntry.message,
+                                            status: notificationEntry.status,
+                                            httpMethod: notificationEntry.httpMethod
+                                        });
+                                    }
+                                    
                                 }
                             }
                         }
