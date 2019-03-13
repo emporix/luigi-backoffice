@@ -587,7 +587,9 @@ if (typeof angular !== "undefined") {
                 
                 var whiteList = [
                     {httpMethod: "remove", status: "200", level: "alert-success", message: "Data deleted successfully"},
+                    {httpMethod: "remove", status: "204", level: "alert-success", message: "Data deleted successfully"},
                     {httpMethod: "post", status: "200", level: "alert-success", message: "Data created successfully"},
+                    {httpMethod: "post", status: "201", level: "alert-success", message: "Data created successfully"},
                     {httpMethod: "put", status: "200", level: "alert-success", message: "Data updated successfully"}
                 ];
 
