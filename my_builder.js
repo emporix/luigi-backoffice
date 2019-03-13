@@ -665,7 +665,7 @@ if (typeof angular !== "undefined") {
                             Builder.notificationManager.popProcessing();
                         }
                         var objName = "";
-                        if(response.config.data.name&&response.config.data.name!=''){
+                        if(response.config.data&&response.config.data.name){
                             var objName = response.config.data.name + ' ';
                         }
                         if (isAutoSuccessNotificationsEnabled()) {
