@@ -584,7 +584,7 @@ if (typeof angular !== "undefined") {
 
         module.run(['Restangular', 'authManager', 'linkManager', 'currentAccountId', '$timeout',
             function (Restangular, authManager, linkManager, currentAccountId, $timeout) {
-
+                
                 var whiteList = [
                     {httpMethod: "remove", status: "200", level: "alert-success", message: "Data deleted successfully"},
                     {httpMethod: "post", status: "200", level: "alert-success", message: "Data created successfully"},
@@ -664,14 +664,17 @@ if (typeof angular !== "undefined") {
                         if (Builder.notificationConfig.autoProcessing && autoProcessing(operation)) {
                             Builder.notificationManager.popProcessing();
                         }
-
+                        var objName = "";
+                        if(response.config.data.name&&response.config.data.name!=''){
+                            var objName = response.config.data.name + ' ';
+                        }
                         if (isAutoSuccessNotificationsEnabled()) {
                             for (var index = 0; index < whiteList.length; index++) {
                                 var notificationEntry = whiteList[index];
                                 if (whiteList[index].httpMethod == operation && response.status == notificationEntry.status) {
                                     Builder.notificationManager.addNotification({
                                         level: notificationEntry.level,
-                                        message: notificationEntry.message,
+                                        message: objName + '' +notificationEntry.message,
                                         status: notificationEntry.status,
                                         httpMethod: notificationEntry.httpMethod
                                     });
