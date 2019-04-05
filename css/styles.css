@@ -10796,7 +10796,7 @@ a.dataCard-heading:focus * {
   text-transform: uppercase;
   color: #7f90a4;
   background: transparent;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 .table > thead > tr > th a,
 .table > tbody > tr > th a,
