@@ -4230,6 +4230,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .input-group-btn > .btn {
   position: relative;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 .input-group-btn > .btn + .btn {
   margin-left: -1px;
@@ -8377,9 +8379,9 @@ section {
 }
 .btn-primary {
   color: #fff;
-  background-color: #106ECA;
-  border-color: #106ECA;
-  box-shadow: 0 2px 0 #e6ca1f;
+  background-color: #106eca;
+  border-color: #106eca;
+  box-shadow: 0 2px 0 #0858a8;
 }
 .btn-primary:focus,
 .btn-primary:active:focus {
