@@ -235,15 +235,12 @@ Builder.postNotificationMgr = function(id, data) {
 
 Builder.notificationManager = {
     pushProcessing : function () {
-        // Builder.postNotificationMgr("pushProcessing");
         LuigiClient.uxManager().showLoadingIndicator();
     },
     popProcessing : function () {
-        // Builder.postNotificationMgr("popProcessing");
         LuigiClient.uxManager().hideLoadingIndicator();
     },
     clearProcessing : function () {
-        // Builder.postNotificationMgr("clearProcessing");
         LuigiClient.uxManager().hideLoadingIndicator();
     },
     addNotification : function (notification) {
@@ -278,7 +275,7 @@ Builder.notificationManager = {
         LuigiClient.uxManager()
             .showConfirmationModal(settings)
             .then(onConfirmCallback,onCancelCallback);
-        
+
     },
     showModalDialog : function (modalConfiguration) {
         this.onOkCallback = modalConfiguration.onOk;
@@ -310,7 +307,7 @@ Builder.notificationManager = {
         return msg;
     },
     markDirty : function(value) {
-   LuigiClient.uxManager().markDirty(value);
+        LuigiClient.uxManager().markDirty(value);
         Builder.notificationManager.dirty = value;
         if(this.dirtyCallback !== null && this.dirtyCallback !== undefined) {
             this.dirtyCallback(value);
@@ -572,7 +569,7 @@ if (typeof angular !== "undefined") {
 
         module.run(['Restangular', 'authManager', 'linkManager', 'currentAccountId', '$timeout',
             function (Restangular, authManager, linkManager, currentAccountId, $timeout) {
-                
+
                 var whiteList = [
                     {httpMethod: "remove", status: "200", level: "alert-success", message: "Data deleted successfully"},
                     {httpMethod: "remove", status: "204", level: "alert-success", message: "Data deleted successfully"},
@@ -678,7 +675,7 @@ if (typeof angular !== "undefined") {
                                             httpMethod: notificationEntry.httpMethod
                                         });
                                     }
-                                    
+
                                 }
                             }
                         }
