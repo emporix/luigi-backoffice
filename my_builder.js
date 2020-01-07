@@ -235,13 +235,16 @@ Builder.postNotificationMgr = function(id, data) {
 
 Builder.notificationManager = {
     pushProcessing : function () {
-        Builder.postNotificationMgr("pushProcessing");
+        // Builder.postNotificationMgr("pushProcessing");
+        LuigiClient.uxManager().showLoadingIndicator();
     },
     popProcessing : function () {
-        Builder.postNotificationMgr("popProcessing");
+        // Builder.postNotificationMgr("popProcessing");
+        LuigiClient.uxManager().hideLoadingIndicator();
     },
     clearProcessing : function () {
-        Builder.postNotificationMgr("clearProcessing");
+        // Builder.postNotificationMgr("clearProcessing");
+        LuigiClient.uxManager().hideLoadingIndicator();
     },
     addNotification : function (notification) {
         Builder.postNotificationMgr("addNotification", notification);
@@ -307,7 +310,7 @@ Builder.notificationManager = {
         return msg;
     },
     markDirty : function(value) {
-        Builder.postNotificationMgr("setPageDirty", value);
+   LuigiClient.uxManager().markDirty(value);
         Builder.notificationManager.dirty = value;
         if(this.dirtyCallback !== null && this.dirtyCallback !== undefined) {
             this.dirtyCallback(value);

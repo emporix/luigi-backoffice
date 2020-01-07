@@ -1,2 +1,5 @@
 .history
 *.bak
+*.iml
+.idea
+
