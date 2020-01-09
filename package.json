@@ -1,0 +1,20 @@
+{
+  "name": "luigi-backoffice",
+  "version": "1.0.0",
+  "description": "LuigiBackOffice wrapper",
+  "main": "my_builder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/saasag/luigi-backoffice.git"
+  },
+  "keywords": [
+    "luigi",
+    "saas"
+  ],
+  "author": "SAAS AG",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/saasag/luigi-backoffice#readme"
+}
