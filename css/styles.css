@@ -582,8 +582,12 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('https://storage.googleapis.com/emporix-frontend-assets/glyphicons-halflings-regular.eot');
+  src: url('https://storage.googleapis.com/emporix-frontend-assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+  url('https://storage.googleapis.com/emporix-frontend-assets/glyphicons-halflings-regular.woff2') format('woff2'),
+  url('https://storage.googleapis.com/emporix-frontend-assets/glyphicons-halflings-regular.woff') format('woff'),
+  url('https://storage.googleapis.com/emporix-frontend-assets/glyphicons-halflings-regular.ttf') format('truetype'),
+  url('https://storage.googleapis.com/emporix-frontend-assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -9402,8 +9406,11 @@ select[multiple].form-readonly-text.form-readonly-text-sm {
 }
 @font-face {
   font-family: "hyicon";
-  src: url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/hyTechne/dist/techne/fonts/hyicon.eot?1486659560');
-  src: url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/hyTechne/dist/techne/fonts/hyicon.eot?#iefix1486659560') format('embedded-opentype'), url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/hyTechne/dist/techne/fonts/hyicon.woff?1486659560') format('woff'), url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/hyTechne/dist/techne/fonts/hyicon.ttf?1486659560') format('truetype'), url('https://bitbucket.org/saasag/luigi-backoffice/raw/master/css/vendor/hyTechne/dist/techne/fonts/hyicon.svg?1486659560#hyicon') format('svg');
+  src: url('https://storage.googleapis.com/emporix-frontend-assets/hyicon.eot?1486659560');
+  src: url('https://storage.googleapis.com/emporix-frontend-assets/hyicon.eot?#iefix1486659560') format('embedded-opentype'),
+  url('https://storage.googleapis.com/emporix-frontend-assets/hyicon.woff?1486659560') format('woff'),
+  url('https://storage.googleapis.com/emporix-frontend-assets/hyicon.ttf') format('truetype'),
+  url('https://storage.googleapis.com/emporix-frontend-assets/hyicon.svg?1486659560#hyicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -12202,7 +12209,7 @@ section.section {
  * Compatible with Select2 3.3.2, 3.4.1, 3.4.2 and Twitter Bootstrap 3.0.0
  * MIT License
  *
- * Modifyed version by SNK 
+ * Modifyed version by SNK
  *
  */
 /**
@@ -13647,13 +13654,13 @@ li.yg-dropdown--menu-link > a:hover * {
   /* NO REQUIRED -  RIGHT NOW ...
 	&:before,
 	&:after{
-		// Fake border workaround to avoid border-height stacking 
+		// Fake border workaround to avoid border-height stacking
 		content: "";
 		width: 100%;
 		height: 1px;
 		background: @vertical-navbar-default-border-color;
 		display: block;
-	} 
+	}
 
 	*/
   transition: .2s;
